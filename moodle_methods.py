@@ -1,4 +1,15 @@
 
+import sys
+from selenium import webdriver # import selenium to the file
+import moodle_locators as locators
+from selenium.webdriver.chrome.service import Service
+from time import sleep
+import datetime
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select # <-- add this import for drop down lists
+from selenium.webdriver.common.keys import Keys
+
+
 from selenium.webdriver.chrome.options import Options
 
 options = Options()
@@ -15,18 +26,6 @@ driver = webdriver.Chrome(options=options)
 
 
 
-import sys
-from selenium import webdriver # import selenium to the file
-import moodle_locators as locators
-from selenium.webdriver.chrome.service import Service
-from time import sleep
-import datetime
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select # <-- add this import for drop down lists
-from selenium.webdriver.common.keys import Keys
-
-#s = Service(executable_path='/Users/reza/PycharmProjects/pythonProject/chromedriver')
-#driver = webdriver.Chrome(service=s)
 
 # ----------------------------------------------------------
 def setUp():
